@@ -13,7 +13,7 @@ export class SleepDataViewerComponent implements OnInit {
      new SleepDataPoint(new Date('2018-03-10T01:22:00'), "Start"),
      new SleepDataPoint(new Date('2018-03-10T10:22:00'), "End"),
      new SleepDataPoint(new Date('2018-03-10T01:00:00'), "Start"),
-     new SleepDataPoint(new Date('2018-03-10T09:22:00'), "End")
+     new SleepDataPoint(new Date('2018-03-10T09:22:00'), "End"),
      new SleepDataPoint(new Date('2018-03-10T01:00:00'), "Start"),
      new SleepDataPoint(new Date('2018-03-10T09:22:00'), "End")
     ];
