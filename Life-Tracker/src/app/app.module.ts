@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from "@angular/forms";
 
 
 import { AppComponent } from './app.component';
@@ -16,7 +17,8 @@ import { SleepDataEditorComponent } from './sleep-tracker/sleep-data-editor/slee
     SleepDataEditorComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
