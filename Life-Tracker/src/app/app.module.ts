@@ -3,11 +3,17 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { SleepTrackerComponentComponent } from './sleep-tracker/sleep-tracker.component';
+import { SleepDataViewerComponent } from './sleep-tracker/sleep-data-viewer/sleep-data-viewer.component';
+import { SleepDataEditorComponent } from './sleep-tracker/sleep-data-editor/sleep-data-editor.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SleepTrackerComponentComponent,
+    SleepDataViewerComponent,
+    SleepDataEditorComponent
   ],
   imports: [
     BrowserModule
