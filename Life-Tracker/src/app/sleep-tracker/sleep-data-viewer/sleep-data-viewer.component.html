@@ -1,5 +1,20 @@
 <div class="row">
   <div class="col-xs-12">
     <h4>View sleep data in the table below</h4>
+    <table class="table table-bordered table-striped">
+      <caption>This table holds data on when you fall asleep and wake up</caption>
+      <thead>
+        <tr>
+          <td><strong>Timestamp</strong></td>
+          <td><strong>Action</strong></td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let sleepDataPoint of sleepDataPoints">
+          <td>{{sleepDataPoint.timestamp}}</td>
+          <td>{{sleepDataPoint.sleepType}}</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </div>
