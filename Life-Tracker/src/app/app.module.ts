@@ -8,6 +8,7 @@ import { SleepTrackerComponentComponent } from './sleep-tracker/sleep-tracker.co
 import { SleepDataViewerComponent } from './sleep-tracker/sleep-data-viewer/sleep-data-viewer.component';
 import { SleepDataEditorComponent } from './sleep-tracker/sleep-data-editor/sleep-data-editor.component';
 import { SleepDataService } from './sleep-tracker/sleep-data.service';
+import { HeaderComponent } from './header/header.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { SleepDataService } from './sleep-tracker/sleep-data.service';
     AppComponent,
     SleepTrackerComponentComponent,
     SleepDataViewerComponent,
-    SleepDataEditorComponent
+    SleepDataEditorComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
