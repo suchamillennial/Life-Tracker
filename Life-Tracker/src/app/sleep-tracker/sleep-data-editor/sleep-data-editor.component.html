@@ -4,7 +4,7 @@
     <form (ngSubmit)="onSubmit()" #form="ngForm" class="form-inline">
       <div class="form-group">
         <label for="timeStamp">Date: </label>
-        <input type="datetime" class="form-control"placeholder="enter the timestamp" ngModel name="timeStamp" required>
+        <input type="datetime" class="form-control"placeholder="enter the timestamp" [ngModel]="this.getCurrentTimeStampString()" name="timeStamp" required>
       </div>
       <div class="form-group">
         <label for="sleepType">Action Type: </label>

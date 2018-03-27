@@ -11,7 +11,7 @@
       </thead>
       <tbody>
         <tr *ngFor="let sleepDataPoint of sleepDataPoints">
-          <td>{{sleepDataPoint.timestamp}}</td>
+          <td>{{sleepDataPoint.timestamp | date:'short'}}</td>
           <td>{{sleepDataPoint.sleepType}}</td>
         </tr>
       </tbody>
