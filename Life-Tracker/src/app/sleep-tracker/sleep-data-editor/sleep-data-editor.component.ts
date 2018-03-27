@@ -24,27 +24,24 @@ export class SleepDataEditorComponent implements OnInit {
     console.log(`ExpectedSleepType set to: ${this.expectedSleepType}`);
   }
 
-  getCurrentTimeStampString(){
-    let dp = new DatePipe(navigator.language);
-    let p = 'y/MM/dd, hh:mm:ss';
+  getCurrentTimeStampString() {
+    const dp = new DatePipe(navigator.language);
+    const p = 'y/MM/dd, hh:mm:ss';
     return dp.transform(Date.now(), p);
   }
-  onSubmit(){
+  onSubmit() {
     // Get the contents of the form and print them out
-    let timeStamp = this.form.value.timeStamp;
-    let sleepType = this.form.value.sleepType;
-    console.log(timeStamp);
-    console.log(sleepType);
-
+    const timeStamp = this.form.value.timeStamp;
+    const sleepType = this.form.value.sleepType;
     // Add the new Datapoint to the sleepDataPoints array in the SleepDataService
     this.sleepDataService.addSleepDataPoint(new SleepDataPoint(new Date(timeStamp), sleepType));
     // Update the expectedSleepType variable to match the one in the service, since it has changed due to the add
     this.expectedSleepType = this.sleepDataService.getExpectedSleepType();
-    // Clear the form after a submit and set the sleep type to whatever the expectedSleepType is
-    
+    // Clear the form after a submit and set the sleep type to whatever the expectedSleepType is and set a default timestamp
     this.form.reset({
       sleepType: this.expectedSleepType,
-      timeStamp: this.getCurrentTimeStampString()});
+      timeStamp: this.getCurrentTimeStampString()
+    });
   }
 
 }
