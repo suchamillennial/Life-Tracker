@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SleepDataService } from './sleep-data.service';
 
 @Component({
   selector: 'app-sleep-tracker',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SleepTrackerComponentComponent implements OnInit {
 
-  constructor() { }
+  constructor(private sleepDataService: SleepDataService) { }
 
   ngOnInit() {
+    // We need to initially set the expected Sleep Data Type in the Sleep Tracker component before it is used in the child components
+    this.sleepDataService.setExpectedSleepType();
   }
 
 }
