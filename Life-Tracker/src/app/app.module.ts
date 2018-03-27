@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { SleepTrackerComponentComponent } from './sleep-tracker/sleep-tracker.component';
 import { SleepDataViewerComponent } from './sleep-tracker/sleep-data-viewer/sleep-data-viewer.component';
 import { SleepDataEditorComponent } from './sleep-tracker/sleep-data-editor/sleep-data-editor.component';
+import { SleepDataService } from './sleep-tracker/sleep-data.service';
 
 
 @NgModule({
@@ -20,7 +21,7 @@ import { SleepDataEditorComponent } from './sleep-tracker/sleep-data-editor/slee
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [SleepDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
